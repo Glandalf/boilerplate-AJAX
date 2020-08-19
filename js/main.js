@@ -6,6 +6,8 @@ function sendQuery(url, method) {
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
            document.getElementById("api-response").innerHTML = xhr.responseText;
+           // Autres méthodes de sélection de noeuds :
+           // .getElementsByClassName("test") .getElementsByTagName('DIV') .querySelector() .querySelectorAll()
         }
     };
     xhr.open("GET", url, true);
